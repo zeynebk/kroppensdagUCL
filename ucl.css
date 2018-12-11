@@ -1,0 +1,669 @@
+/*All elements*/
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+/*Body and Html*/
+body, html {
+    height: 100%;
+    font-family: Verdana, Geneva, sans-serif; 
+  
+}
+
+
+/*Navbar*/
+.navbar {
+  background: #00454e;
+  box-shadow: 0px 2px 16px 3px rgba(0,0,0,0.20);
+  position: fixed;
+  top: 0;
+  height:  85px;
+  line-height: 85px;
+  width: 100%;
+  z-index: 10; 
+}
+
+.nav-wrapper {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+} 
+
+/*Logo*/
+.logo {
+  float: left;
+  padding: 5px;
+  
+  }
+.logosize {
+  width: 200px;
+}
+
+/*Navbar List*/
+.navbar ul {
+  display: inline-block;
+  float: right;
+  list-style: none;
+  text-align: right; 
+  }
+/*On smaller screens navbar list is hidden*/
+@media only screen and (max-width: 1100px) {
+    .navbar ul {
+      display: none;
+      }
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+/*Navbar Text*/
+.navbar li a {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin: 0 24px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+}
+
+/* Change color on hover*/
+.navbar li a:hover {
+  color: #f2cac1;
+  transition: all 1s ease;
+}
+
+/* Line Animation */
+.navbar li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -7px;
+  background: #f2cac1;
+}
+
+.navbar li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+.navbar li a:hover:before {
+  background: #f2cac1;
+  margin-left: 4px;
+  width: 20px;
+  transition: width 0.5s ;
+}
+/*Hamburgermenu is hidden*/
+.hamburgermenu {
+display:none
+}
+
+/*Hamburgermenu is not hidden, when screens is under 1100px*/
+@media only screen and (max-width: 1100px) 
+{
+.hamburgermenu{
+    display: inline-block;
+    cursor: pointer;
+    top:0;
+    right: 0;
+    position: fixed;
+    padding-top: 25px;
+    padding-right: 40px; 
+    z-index: 30;
+    }
+}
+/*hamburger menu lines*/
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    border-radius: 10px;
+    background: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: rotate(-45deg)translate(-8px, 7px) ;;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px) ;  
+}
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-right: 150px;
+    margin-top: 75px;
+    z-index: 30;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f1f1f1;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: fixed;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #00454e;
+    padding: 12px 16px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background: rgba(0,0,0,0.1)}
+
+/* Show the dropdown menu when clicks on the button */
+.show {display:block;
+
+}
+
+/* Fixed SoMe icon bar */
+.icon-bar {
+  position: fixed;
+  right: 0px;
+  top: 47.5%;
+  z-index: 9;
+}
+
+/* icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease; 
+}
+
+/*SoMe color*/
+.facebook {
+   background: #00454e;
+
+}
+.instagram {
+  background: #00454e;
+
+}
+
+/* Change color on hover*/
+.icon-bar a:hover {
+  background: rgba(0,69,78,0.7);
+}
+
+
+/*Hero Img*/
+.hero-image {
+  background-image: url("hero.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*Hero Big cirkel*/
+.big-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+/*Hero Big Button*/
+.big-cirkel-button {
+  font-size:10px;
+  margin-top: 400px;
+  padding: 5px ;
+  text-align: center; 
+  background: rgba(250, 231,106,0.8);
+  font-weight: bold;
+  text-transform: uppercase; 
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 1px 16px 0 rgba(0,0,0,0.10);
+  border-radius: 50%;
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+    color: #00454e; 
+}
+
+/*Shadow under big button on hover*/
+.big-cirkel-button:hover {
+box-shadow: 0 2px 16px 0 rgba(0,0,0,0.24);
+background: rgba(250, 231,106,0.9);
+}
+
+
+/*Hero Small cirkel*/
+.small-circle {
+  background: rgba(242, 202,193,0.9);
+  border-radius: 50%;
+  box-shadow: 0 1px 16px 0 rgba(0,0,0,0.10);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  transform: translate(-50%, -50%); 
+  margin-top: 195px;
+}
+
+/*Hero Small cirkel dato*/
+.dato{
+  font-size: 8px;
+  text-align: center; 
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+    color: #00454e; 
+  }
+
+
+/*Om*/
+.B-om{
+ background: rgba(250,231,106,0.3);
+padding-top: 30px; 
+margin-top: -4px; 
+height:560px;
+}
+.om {
+padding-top: 45px;
+max-width: 1000px;
+margin: auto;
+}
+/*Om Headline*/
+.om h1{
+  text-align: center;
+  color: #00454e;
+  font-size:28px
+}
+
+.om-os{
+  padding-top: 60px;
+}
+
+.B-oplaegsholder{
+background: rgba(202,228,227,0.7);
+padding-bottom: 100px;
+}
+/*Om Img*/
+.oplaegimg {
+  width: 300px;
+  height:300px; 
+  float: left;
+  margin-right:100px;
+
+}
+
+/*Om text*/
+.omtext{
+   line-height: 200%;
+   max-height: 300px;
+   overflow: scroll;
+   color: #00454e;
+}
+
+
+/*Om img and text on smaller screens*/
+@media only screen and (max-width: 1100px){
+.om-os{
+position: absolute;
+left: 5%;
+right: 4% 
+  }
+}
+@media only screen and (max-width: 650px) {
+.om-os{
+ position: absolute;
+ left: 30%;
+ max-width: 300px;
+    }
+}
+@media only screen and (max-width: 500px) {
+.om-os{
+left: 15%;
+  }
+}
+@media only screen and (max-width: 400px) {
+.om-os{
+left: 13%;
+  }
+}
+
+/*Oplægsholder*/
+.oplaegsholder{
+    max-width: 1300px;
+ margin: auto;
+ padding-top: 20px;
+}
+
+/*Oplægsholder headline*/
+.oplaegsholder h2{
+ text-align: center;
+   color: #00454e;
+   font-size:28px;  
+   padding-top: 60px;
+}
+
+.oplaegsholderimg{
+  width:300px;
+  cursor: pointer;
+}
+/*Oplægsholder row*/
+.row{
+margin-left: 50px;
+margin-top: 90px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Oplægsholder row on smaller screens*/
+@media screen and (max-width: 950px) {
+    .row {
+       margin-left: 30%;
+       }
+}
+@media screen and (max-width: 500px) {
+    .row {
+       margin-left: 7%;
+       }
+}
+
+/*Oplægsholder colum*/
+.column {
+    float: left;
+    width: 33.33%;
+    color:#00454e;
+}
+
+/*Oplægsholder colum on smaller screens*/
+@media screen and (max-width: 950px) {
+    .column {
+        width: 100%;       
+    }
+}
+
+.laeMere:hover {
+  width: 60px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.10);
+}
+
+/* Modal hidden */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 130px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.6);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 600px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+
+/*Close Button */
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 18%;
+  right:10%;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0,69,78);
+  z-index: 2;
+}
+
+/*Chage color on hover*/
+.close:hover
+{
+  color: rgba(0,69,78,0.8);
+}
+
+
+/*program*/
+.program{
+  padding-bottom: 40px;
+  color: #00454e;
+  background: rgba(250,231,106,0.3)
+
+}
+/*program headline*/
+.program h3{
+ text-align: center;
+   color: #00454e;
+   padding-bottom: 40px;
+}
+
+.program ul {
+  list-style: none; 
+}
+
+.program li {
+  margin: 32px 0;
+}
+
+/*program Content*/
+.tider1{
+  margin-left: 26%;
+  display: inline-block;
+  padding-right: 100px;
+}
+
+.schedule_time {
+  width: 75px;
+  text-align: left;
+  display: inline-block;
+}
+
+.schedule_event{
+  font-weight: bold;
+}
+
+
+
+
+
+/*Placering*/
+.placering{
+   text-align: center;
+   color: #00454e;
+   background: rgba(202,228,227,0.7);
+}
+
+
+/*Contact from*/
+.B-contactfrom{
+background: rgba(202,228,227,0.7);
+}
+
+.contact  {
+  padding-top: 30px;
+ text-align: center; 
+ max-width: 1100px;
+ margin: auto;
+ text-align: center;
+ color: #00454e;
+ padding-bottom: 100px;
+}
+
+/*Contact form Name and Email*/
+input[type=text]{
+    width: 350px;
+    padding: 12px;
+    border: 1px solid #A8C0CC;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#Name {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#Email {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/*Contact form Message*/
+textarea { 
+    width: 750px;
+    padding: 12px;
+    border: 1px solid #A8C0CC;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    height:100px;
+    min-height: 40px;
+    max-height: 300px;
+    resize: vertical;
+}
+
+#subject {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/*smaller on screens under 785px*/
+@media only screen and (max-width: 785px) {
+    textarea {
+        width: 350px;
+
+    }
+}
+
+/*Contact form submit*/
+input[type=submit] {
+  background: rgba(250,231,106,0.8);
+    color: #00454e;
+    font-weight: bold;
+    padding: 10px;
+    width:71px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 100px;
+    position: absolute;
+    transform: translate(430%);
+}
+/*Contact form submit hover*/
+input[type=submit]:hover {
+    background: rgb(250,231,106);
+}
+/*position on screens under 785px*/
+@media only screen and (max-width: 785px) {
+    input[type=submit] {
+        
+    transform: translate(-50%, -50%);
+    margin-top: 15px;
+
+    }
+}
+
+
+/*Back to top arrow*/
+.arrowup {
+  border: solid;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  
+}
+
+/*Back to top is hidden*/
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  background: #00454e; 
+  color: white; 
+  cursor: pointer;
+  padding: 12px; 
+  border-radius: 10px;
+  z-index: 0;
+}
+/*Back to top hover*/
+#myBtn:hover {
+ background: rgba(0,69,78,0.8);
+}
+
+/*quote*/
+.quote{
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: rgba(0,69,78,0.8);
+   height: 50px;
+   line-height: 50px;
+   color: white;
+   text-align: center;    
+}
+
+/*footer*/
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: #00454e;
+   height: 70px;
+   padding-top: 20px;
+   color: white;
+   text-align: center;
+}
+
+
+
+
+
+
+
+
